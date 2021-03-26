@@ -23,7 +23,7 @@ function generateSignature(apiKey, apiSecret, meetingNumber, role) {
 }
 
 function getMeetingPasscode(meetingNumber) {
-  return fetch('https://api.zoom.us/v2/meetings/' + meetingNumber, {
+  return fetch('https://api.zoom.us/v2/webinars/' + meetingNumber, {
     method: "GET",
     headers: {
       'Authorization': 'Bearer ' + createJWTToken(),
