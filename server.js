@@ -29,9 +29,15 @@ app.post('/signature', async (req, res) => {
 
 app.post('/passcode', async (req, res) => {
     if (req.body.meetingNumber) {
-        res.status(200).json({ "signature": getMeetingPasscode(req.body.meetingNumber) });
-        return;
-    }
+       let getPasscode=new Promise((resolve,reject)=>{
+           resolve(getMeetingPasscode(req.body.meetingNumber));
+       })
+       .then(pass=>{
+           return pass;
+       });
 
-    res.json({ "response": "Invalid request" })
+       getPasscode.then(password=>{
+           res.send({ "passcode": password });
+       });
+    }
 });
