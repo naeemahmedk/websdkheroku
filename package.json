@@ -1,0 +1,26 @@
+{
+  "name": "herokuhelper",
+  "version": "1.0.0",
+  "description": "HerokuHelper",
+  "main": "helper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naeemahmedk/websdkheroku.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naeemahmedk/websdkheroku/issues"
+  },
+  "homepage": "https://github.com/naeemahmedk/websdkheroku#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
