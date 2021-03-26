@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 const { getMeetingPasscode, generateSignature } = require("./helper");
 const cors = require("cors");
 
-var port = 9000;
+var port = 8080;
 
 var app = express();
 

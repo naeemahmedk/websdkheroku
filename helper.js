@@ -31,6 +31,7 @@ function getMeetingPasscode(meetingNumber) {
     }
   }).then(res => res.json())
     .then(meeting => {
+      console.log(meeting)
       return meeting.password
     })
     .catch(error => {
