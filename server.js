@@ -20,7 +20,7 @@ app
 
 app.post('/signature', async (req, res) => {
     if (req.body.meetingNumber && req.body.role) {
-        res.status(200).json({ "signature": generateSignature(process.env.API_KEY, process.env.API_SECRET, req.body.meetingNumber, req.body.role) });
+        res.status(200).json({"apiKey":process.env.API_KEY, "signature": generateSignature(process.env.API_KEY, process.env.API_SECRET, req.body.meetingNumber, req.body.role) });
         return;
     }
 
